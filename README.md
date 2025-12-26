@@ -13,24 +13,24 @@ Pour cette tâche, je vous recommande d'utiliser Gnome Disks, accessible facilem
 
 1. **Installer Gnome Disques**: Cet outil facilite la gestion de vos disques. Vous le trouverez en cherchant "disques" dans la logithèque de votre distribution. Il est généralement près installé sur les distributions utilisants Gnome.
 
-   ![Ouvrir Gnome Disks](images/1.png)
+   ![Ouvrir Gnome Disks](img/1.png)
 
 2. **Supprimer les anciennes partitions**: Si vous souhaitez effacer des partitions existantes, cliquez sur le bouton ![image](images/2-1.png)
 situé à droite de la partition concernée dans l'interface de Gnome Disks.
 
-   ![Supprimer les anciennes partitions](images/2.png)
+   ![Supprimer les anciennes partitions](img/2.png)
 
 3. **Formatage de la partition**: Cliquez sur les petits engrenages pour ouvrir le menu d'options, puis choisissez "Formater la partition". Une boîte de dialogue de formatage s'ouvrira.
 
-   ![Formatage de la partition](images/3.png)
+   ![Formatage de la partition](img/3.png)
 
 4. **Choisir le système de fichiers**: Il est fortement conseillé d'éviter les systèmes de fichiers NTFS ou exFAT sur Linux, en particulier si vous prévoyez de partager la partition avec Windows, car cela peut causer des problèmes. Nommez votre volume et sélectionnez Ext4 comme système de fichiers pour une compatibilité optimale avec Linux.
 
-   ![Choisir le système de fichiers](images/4.png)
+   ![Choisir le système de fichiers](img/4.png)
 
 5. **Finaliser le formatage**: Assurez-vous de n'avoir commis aucune erreur avant de procéder. Cliquer sur "Formater" lancera le processus de formatage.
 
-   ![Finaliser le formatage](images/5.png)
+   ![Finaliser le formatage](img/5.png)
 
 ## Monter au démarrage
 
@@ -38,17 +38,17 @@ Pour que votre disque ou SSD soit automatiquement monté au démarrage :
 
 1. **Modifier les options de montage**: Recliquez sur les petits engrenages, mais cette fois-ci, allez dans "Modifier les options de montage".
 
-   ![Modifier les options de montage](images/6.png)
+   ![Modifier les options de montage](img/6.png)
 
 2. **Configurer le montage automatique** :
     - Cochez "Monter au démarrage".
     - Mettez les options `defaults` et, pour les SSD, ajoutez `noatime` pour réduire l'usure et améliorer la performance. Attention, toute erreur dans ces options peut empêcher le volume de se monter correctement pour éviter au maximum ce genre de problèmes, je vous recommande d'ajouter également l'option `nofail`.
     - Montez dans `/media`, `/mnt`, `/home` selon vos préférences.
-    - Montez dans `/media` assure que vos disques soient faciles à trouver quelque soit l'application. (résutat [/mnt](https://codeberg.org/Gaming-Linux-FR/guide-formater-monter/src/branch/main/images/mnt.png) [résultat /media](https://codeberg.org/Gaming-Linux-FR/guide-formater-monter/src/branch/main/images/media.png))
+    - Montez dans `/media` assure que vos disques soient faciles à trouver quelque soit l'application. (résutat [/mnt](img/mnt.png) [résultat /media](img/media.png))
     - Utilisez l'identification par UUID, qui est la méthode la plus fiable.
     - Laissez le type de système de fichiers sur "auto" ou spécifiez "ext4" si c'est votre choix lors du formatage.
 
-   ![Configurer le montage automatique](images/7.png)
+   ![Configurer le montage automatique](img/7.png)
 
 ### Explications des options `defaults,nofail,noatime,x-gvfs-show`
 
